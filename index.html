@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AVANT Steelfab Private Limited</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ========== RESET ========== */
+*{
+  margin:0;
+  padding:0;
+ 
+  font-family:"Segoe UI",Arial,sans-serif;
+}
+body{
+  background:#0b0f14;
+  color:#ffffff;
+}
+/* ========== HEADER ========== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:80px;
+  padding:0 0px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:linear-gradient(to bottom,#101b2a,#0b0f14);
+  z-index:1000;
+}
+.logo{
+  display:flex;
+  flex-direction:column;
+}
+.logo .main{
+  font-size:36px;
+  font-weight:700;
+  color:#4f7cff;
+  letter-spacing:3px;
+}
+.logo .sub{
+  font-size:11px;
+  color:#1658bc;
+  letter-spacing:2px;
+}
+/* NAV */
+nav a{
+  color:#cfd8e3;
+  text-decoration:none;
+  margin:0 16px;
+  font-size:14px;
+  transition:.3s;
+}
+nav a:hover{
+  color:#4f7cff;
+}
+
+/* CONTACT BUTTON */
+.contact-btn{
+  background:#1f3fff;
+  padding:10px 18px;
+  border-radius:20px;
+  font-size:13px;
+  box-shadow:0 0 15px rgba(79,124,255,.4);
+  
+}
+
+/* ========== HERO WITH BACKGROUND IMAGE ========== */
+
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .6), rgba(0, 0, 0, .3)),
+    url("assets/welding.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  position: relative;
+}
+
+/* HERO CONTENT */
+.hero-content{
+  max-width:900px;
+}
+
+.hero h1{
+  font-size:54px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  font-size:18px;
+  color:#cfd8e3;
+  margin-bottom:26px;
+}
+
+.hero button{
+  background:#4f7cff;
+  border:none;
+  padding:14px 28px;
+  font-size:15px;
+  color:#fff;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* ========== SECTIONS ========== */
+section{
+  
+  padding:90px 60px;
+  position: relative;
+}
+
+.dark {
+  background: 
+    linear-gradient(rgba(11, 15, 20, 0.92), rgba(11, 15, 20, 0.92)),
+    url("assets/About\ us\ img.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+h2{
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+p{
+  color:#b8c2d1;
+  line-height:1.7;
+  max-width:900px;
+}
+#services {
+  background: 
+    linear-gradient(rgba(11, 15, 20, 0.88), rgba(11, 15, 20, 0.88)),
+    url('assets/services.img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#services h2 {
+  color: #ffffff;
+}
+
+#services > p {
+  color: #cfd8e3;
+}
+
+ .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #0b111c;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .6);
+  transition: .3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(79, 124, 255, .3);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #1a2332;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  transition: transform .3s ease;
+}
+ /* .card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #1a2332;
+  flex-shrink: 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .3s ease;
+} */
+
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 30px;
+  flex: 1;
+}
+
+.card-content h3 {
+  color: #4f7cff;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card-content p {
+  color: #b8c2d1;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.card h3 {
+  color: #4f7cff;
+  margin-bottom: 10px;
+}
+
+/* ========== CONTACT ========== */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.contact-box{
+   background:#0b111c;
+  padding:30px;
+  border-radius:14px;
+}
+.contact-box h3{
+  color: #4f7cff;
+  margin-bottom: 10px;
+}
+/* ========== FOOTER ========== */
+footer{
+  background:#358af2;
+  padding:20px;
+  text-align:center;
+  font-size:13px;
+  color:#4a5059;
+}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:900px){
+  nav{display:none;}
+  header{padding:0 30px;}
+  .hero h1{font-size:40px;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <span class="main"><img src="C:\Users\Admin\OneDrive\Desktop\Website\assets\Avant_Logo.png"alt="AVANT" width="200" height="250"></span>
+    <!-- <span class="sub">STEELFAB PRIVATE LIMITED</span> -->
+  </div>
+<nav>
+    <a href="#home">HOME</a>
+    <a href="#about us">ABOUT US</a>
+    <a href="#products">PRODUCTS</a>
+    <a href="#services">SERVICES</a>
+    <a href="#contact us">CONTACT US</a>
+  </nav>
+
+ <div class="contact-btn">📞 730 503 5001</div>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Steel Fabrication Specialist</h1>
+    <p>Precision Engineering • Modern Manufacturing • Reliable Strength</p>
+    
+  </div>
+</section>
+
+<!-- ABOUT -->
+ 
+<body>
+<section class="dark" id="about">
+  <h2>About Us</h2>
+  <p>
+    AVANT Steelfab Private Limited delivers high-quality steel fabrication
+solutions using advanced technology and skilled expertise.
+  </p>
+</section>
+</body>
+</html>
+
+
+<section class="dark" id="products">
+  <h2>Products</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image">
+        <img src="assets/E-Vehicle.png" alt="Special Purpose E-Vehicle">
+      </div>
+      <div class="card-content">
+        <h3>Special Purpose E-Vehicle</h3>
+        <p>Engineered heavy-duty EVs with custom steel fabrication to meet robust performance, durability and payload demands.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="assets/SPM.png" alt="Special Purpose Machines">
+      </div>
+      <div class="card-content">
+        <h3>Special Purpose Machines</h3>
+        <p>High-torque shredding systems designed for efficient processing of tough organic materials such as vegetables, fruits and branches.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="assets/field forge.png" alt="Field Forge">
+      </div>
+      <div class="card-content">
+        <h3>Field Forge</h3>
+        <p>On-site forging of steel components to precisely shape parts where they are needed, reducing logistics and installation time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-image">
+        <img src="assets/PEB.png" alt="Pre-Engineered Buildings">
+      </div>
+      <div class="card-content">
+        <h3>Pre-Engineered Buildings</h3>
+        <p>Pre-Engineered Buildings (PEBs) in steel fabrication are structures built from factory-made, precision-cut steel components (like columns, beams, purlins, and cladding) that are bolted together on-site, offering a cost-effective, rapid, and flexible alternative to conventional construction, ideal for warehouses, hangars, and industrial facilities.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="assets/HIF.png" alt="Heavy Interior Fabrication">
+      </div>
+      <div class="card-content">
+        <h3>Heavy Interior Fabrication</h3>
+        <p> Heavy interior fabrication involves the design, creation, and installation of durable, often structural, components within interior spaces, frequently utilizing materials like mild steel, stainless steel, aluminum, glass, and wood.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="assets/design.png" alt="Designing Services">
+      </div>
+      <div class="card-content">
+        <h3>Designing Services</h3>
+        <p>steel fabrication provide crucial engineering, drafting, and 3D modeling to transform concepts into accurate shop drawings, ensuring structural integrity, efficiency, and manufacturability.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="assets/Automation.png" alt="Automation">
+      </div>
+      <div class="card-content">
+        <h3>Automation</h3>
+        <p>Advanced computer-controlled technologies automating steel fabrication processes to enhance efficiency, precision, and consistency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-box"><h3>Address</h3><p>97-A,Puthuvasalasu,Chennimalai Road,erode- 638 112 <br>Tamil Nadu,India.
+    </p></div>
+    <div class="contact-box"><h3>Registration details</h3></h3><p>CIN# U29111TZ2016PTC027842<br>
+GST # 33AAOCA6303R1ZA</p></div>
+    <div class="contact-box"><h3>Phone</h3><p>+91 730 503 5001</p></div>
+    <div class="contact-box"><h3>Email</h3><p>admin@avantsteelfab.com</p></div>
+  </div>
+</section>
+
+<footer>
+  AVANT Steelfab Private Limited. All Rights Reserved.
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
