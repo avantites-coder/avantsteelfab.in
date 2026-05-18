@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Avant Steelfab Private Limited</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0XVEHNMQGZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0XVEHNMQGZ');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -111,11 +120,7 @@ header{
     box-shadow: 0 20px 60px rgba(2, 2, 2, 0.5), 0 0 0 1px rgba(255,255,255,0.03);
    
   }
-  /* .dropdown-menu a:first-child {
-    margin-top: 0;
-    padding-top: 0;
-} */
-
+  
   .dropdown-menu::before {
     content: '';
     padding:0;
@@ -183,8 +188,6 @@ header{
     font-size: 16px;
     flex-shrink: 0;
 }
-    
-
 
 /* ========== HERO WITH BACKGROUND IMAGE ========== */
 
@@ -537,7 +540,8 @@ p{
 .card-content p {
   color: #b8c2d1;
   line-height: 1.6;
-  font-size: 1rem ; 
+  font-size: 1rem;
+  text-align: justify;
   }
 
 .card h3 {
@@ -591,6 +595,7 @@ p{
 
 .works-text {
   flex: 1;
+  text-align: justify;
 }
 
 .works-text h3 {
@@ -655,6 +660,24 @@ p{
     font-size: 16px;
     }
 
+
+
+.contact-loc {
+    text-align: center;
+}
+
+.contact-loc img {
+    width: 400px;
+    border-radius: 20px;
+    border: 4px solid #f1e7ef;
+    padding: 10px;
+}
+
+.contact-loc p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #b8c2d1;
+}
 .contact-qr {
     text-align: center;
 }
@@ -743,7 +766,7 @@ footer{
 <body>
 <section class="dark" id="about">
   <h2>Engineering Excellence Since 2015</h2>
-  <p>Founded in 2015,<strong>Avant Steelfab Pvt Ltd.</strong> has a singular vision: to be a leader in providing
+  <p>Founded in 2015,<strong> Avant Steelfab Pvt Ltd.</strong> has a singular vision: to be a leader in providing
 <strong>world-class steel fabrication solutions.</strong> This mission is supported by our sister company,
 Theeran & Co., which has been delivering exceptional service since 2012. Together, we form a
 formidable force in the steel fabrication industry.<br>
@@ -1084,18 +1107,25 @@ consistently exceeding expectations and setting new industry standards.
                 PAN :AAOCA6303R
             </p>
             </div>
-
-            <!-- Right Side QR Code -->
+            <!-- Center QR Code -->
             <div class="contact-qr">
                 <img src="assets/Theeran_Google Map_QR_Code.png" alt="Scan QR Code">
-                <p> OUR LOCATION SCAN HERE</p>
+                <p> SCAN TO REACH US</p>
             </div>
            </div>
 
+            <!-- Right Side location Code -->
+            <div class="contact-loc">
+              <p>
+    <a href="https://maps.app.goo.gl/muEmYqHJDJHxAJkW6" target="_blank">
+      <img src="assets/location.png" alt="location" width="100%">
+    </a>
+  </p>
+ </div>
+
+        
         <div class="company-details">
-           <!-- <p>🌐www.avantsteelfab.in</p>
-         -->
-    🌐 
+        🌐 
     <a href="https://www.avantsteelfab.in" target="_blank">
         www.avantsteelfab.in
     </a>
